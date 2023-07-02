@@ -1,0 +1,40 @@
+# Emacs
+*~
+\#*\#
+
+# Java
+*.class
+*.jar
+
+# Mac
+.DS_Store
+.DS_STORE
+
+# IntelliJ
+.idea/
+*.iml
+
+# Python
+__pycache__/
+
+# VS Code
+.classpth
+.project
+.vscode/
+
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+
+pattern-stats.yml
+shadow-stats.yml
+shadows.yml
+unknown-shadows.yml
+composite-stats.yml
+composites.yml
+unknown-composites.yml
+composition-seqs.yml
+test-stats.yml
+gen-tests/
+gen-code/

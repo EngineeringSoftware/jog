@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.0.0'
+}
+
+group 'jog'
+version '0.0.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.amihaiemil.web:eo-yaml:6.0.1'
+    implementation 'io.github.tudo-aqua:z3-turnkey:4.8.10'
+    implementation 'com.github.javaparser:javaparser-symbol-solver-core:3.24.4'
+    testImplementation 'junit:junit:4.13.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+// compileJava {
+//     options.compilerArgs << '-Xlint:unchecked'
+// }

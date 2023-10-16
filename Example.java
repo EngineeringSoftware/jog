@@ -11,8 +11,8 @@ public class Example {
     }
 
     @Pattern
-    public void ADD8(long a, long b, long c) {
-        before((a - b) + (c - a));
-        after(c - b);
+    public void ADD7(long a, long b, long c) {
+        before((a - b) + (b - c));
+        after(a - c);
     }
 }

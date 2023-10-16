@@ -14,7 +14,7 @@ rm -fr gen-code gen-tests
 
 # Run
 echo "Reading the patterns from file Example.java..."
-java -cp "${JOG_JAR}" jog.Main Example.java
+java -jar "${JOG_JAR}" Example.java
 # Clean some stat files.
 rm *-stats.yml
 echo "Generated C++ code saved in gen-code/."

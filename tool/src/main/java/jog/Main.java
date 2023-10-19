@@ -39,12 +39,10 @@ public class Main {
         generateTest(patterns);
 
         // Collect stats
-        collectStats(patterns);
+        // collectStats(patterns);
 
         // Analyze relations between patterns
-        PatternRelation ps = new PatternRelation(patterns);
-        ps.analyze();
-        ps.output();
+        analyzeRelations(patterns);
     }
 
     private static void generateCode(List<PatternV> patterns) {
@@ -57,9 +55,14 @@ public class Main {
         for (Map.Entry<BinNode.NodeType, List<PatternV>> e : patternsByType.entrySet()) {
             new ClassGen(e.getKey(), e.getValue(), "gen-code").generateCode();
         }
+
+        // Console output
+        System.out.println("See gen-code/ for generated compiler pass in C/C++.");
     }
 
-    // Generate a separate test class for every node type
+    /**
+     * Generate a separate test class for every node type.
+     */
     private static void generateTest(List<PatternV> patterns) {
         Map<BinNode.NodeType, List<PatternV>> patternsByType = new HashMap<>();
         for (PatternV p: patterns) {
@@ -74,6 +77,14 @@ public class Main {
         for (Map.Entry<BinNode.NodeType, List<PatternV>> e : patternsByType.entrySet()) {
             new TestClassGen(e.getKey(), e.getValue(), "gen-tests").generateTestCode();
         }
+
+        // collectTestStats(patternsByType);
+
+        // Console output
+        System.out.println("See gen-tests/ for generated JIT optimization tests in Java.");
+    }
+
+    private static void collectTestStats(Map<BinNode.NodeType, List<PatternV>> patternsByType) {
         // Collect all test stats into a file.
         YamlNode yamlNode = Yaml.createYamlSequenceBuilder()
                 .add(Yaml.createYamlMappingBuilder()
@@ -114,5 +125,15 @@ public class Main {
         .filter(stats -> !stats.getShadows().isEmpty())
         .collect(Collectors.toList()));
         shw.output("shadow-stats.yml");
+    }
+
+    /**
+     * Analyze relations between patterns.
+     */
+    private static void analyzeRelations(List<PatternV> patterns) {
+        PatternRelation ps = new PatternRelation(patterns);
+        ps.analyze();
+        // ps.output();
+        ps.outputToConsole();
     }
 }

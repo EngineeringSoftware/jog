@@ -15,8 +15,3 @@ rm -fr gen-code gen-tests
 # Run
 echo "Reading the patterns from file Example.java..."
 java -jar "${JOG_JAR}" Example.java
-# Clean some stat files.
-rm *-stats.yml
-echo "Generated C++ code saved in gen-code/."
-echo "Generated Tests saved in gen-tests/."
-echo "Shadow relations reported in shadows.yml."

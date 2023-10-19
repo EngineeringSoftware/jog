@@ -184,6 +184,21 @@ public class PatternRelation {
         // YamlUtil.writeYamlNodeToFile(seqsToYaml(compositionSeqs), "composition-seqs.yml");
     }
 
+    public void outputToConsole() {
+        System.out.println("Shadow relations:");
+        for (PatternV p : patterns) {
+            if (!shadows.containsKey(p)) {
+                continue;
+            }
+            for (Map.Entry<PatternV, Set<PatternV>> e : shadows.entrySet()) {
+                // convert set to a comma separated string
+                String s = e.getValue().stream().map(PatternV::getName)
+                            .collect(Collectors.joining(", "));
+                System.out.println(p + " shadows " + s);
+            }
+        }
+    }
+
     private YamlNode seqsToYaml(List<Seq> seqs) {
         YamlSequenceBuilder seqBuilder = Yaml.createYamlSequenceBuilder();
         for (Seq s : seqs) {

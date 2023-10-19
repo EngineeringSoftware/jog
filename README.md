@@ -245,11 +245,11 @@ Thank you!
 ```bibtex
 @inproceedings{zang23jog,
   author = {Zang, Zhiqiang and Thimmaiah, Aditya and Gligoric, Milos},
-  title = {{Pattern-Based Peephole Optimizations with {J}ava {JIT} Tests}},
+  title = {Pattern-Based Peephole Optimizations with {J}ava {JIT} Tests},
   booktitle = {International Symposium on Software Testing and Analysis},
-  pages = {to appear},
+  pages = {64--75},
   year= {2023},
-  doi = {to appear},
+  doi = {10.1145/3597926.3598038},
 }
 ```
 

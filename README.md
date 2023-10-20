@@ -192,9 +192,10 @@ To run the example, please run `./demo.sh`:
 $ ./demo.sh
 Building JOG...
 Reading the patterns from file Example.java...
-Generated C++ code saved in gen-code/.
-Generated Tests saved in gen-tests/.
-Shadow relations reported in shadows.yml.
+See gen-code/ for generated compiler pass in C/C++.
+See gen-tests/ for generated JIT optimization tests in Java.
+Shadow relations:
+Pattern ADD2 shadows ADD7
 ```
 
 # Hall Of Fame

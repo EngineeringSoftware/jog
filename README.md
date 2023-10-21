@@ -1,13 +1,13 @@
 # JOG
 
 JOG is a framework that facilitates developing Java JIT peephole
-optimizations alongside JIT tests. JOG enables developers to write a
-pattern, in Java itself, that specifies desired code transformations
-by writing code before and after the optimization, as well as any
-necessary preconditions. Such patterns can be written in the same way
-that tests of the optimization are already written in OpenJDK. JOG
-translates each pattern into C/C++ code that can be integrated as a
-JIT optimization pass. JOG also generates Java tests for optimizations
+optimizations. JOG enables developers to write a pattern, in Java
+itself, that specifies desired code transformations by writing code
+before and after the optimization, as well as any necessary
+preconditions. Such patterns can be written in the same way that tests
+of the optimization are already written in OpenJDK. JOG translates
+each pattern into C/C++ code that can be integrated as a JIT
+optimization pass. JOG also generates Java tests for optimizations
 from patterns. Furthermore, JOG can automatically detect possible
 shadow relation between a pair of optimizations where the effect of
 the shadowed optimization is overridden by another.
@@ -22,7 +22,7 @@ the shadowed optimization is overridden by another.
 
 ## Requirements
 
-- Linux with GNU Bash (tested on Ubuntu 20.04)
+- Linux with GNU Bash (tested on Ubuntu 20.04 with GNU Bash 5.0.17(1)-release (x86_64-pc-linux-gnu))
 - JDK >=11
 
 ## Example
@@ -239,9 +239,8 @@ Fix detected shadowed optimizations:
 
 ## Citation
 
-If you use JOG in your research, we request you to cite our
-[ISSTA'23 paper](https://cptgit.github.io/dl/papers/zang23jog.pdf).
-Thank you!
+If you use JOG in your research, please cite our [ISSTA'23
+paper](https://cptgit.github.io/dl/papers/zang23jog.pdf).
 
 ```bibtex
 @inproceedings{zang23jog,

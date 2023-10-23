@@ -25,6 +25,12 @@ the shadowed optimization is overridden by another.
 - Linux with GNU Bash (tested on Ubuntu 20.04 with GNU Bash 5.0.17(1)-release (x86_64-pc-linux-gnu))
 - JDK >=11
 
+We also provide a docker image with pre-built OpenJDK and cloned `jog`
+repository.
+```bash
+docke pull zzqut/jog:latest
+```
+
 ## Example
 
 Developers write Java JIT peephole optimizations in _patterns_, using

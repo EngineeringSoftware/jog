@@ -1200,6 +1200,7 @@ public class AddNodeExample {
      */
     @Pattern
     @Origin("LLVM")
+    @PR(16334)
     public void pNewDeMorganLawOrToAnd(int A, int B) {
         before((A ^ -1) | (B ^ -1));
         after((A & B) ^ (-1));

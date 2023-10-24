@@ -51,7 +51,7 @@ public class MulNodeExample {
 
     /**
      * Convert "(0-x)*(0-y)" into "x*y".
-     * 
+     *
      * <pre>{@code
      *  if (real_mul && in1->is_Sub() && in2->is_Sub()) {
      *    if (phase->type(in1->in(1))->is_zero_type() &&
@@ -114,7 +114,7 @@ public class MulNodeExample {
      * Convert "c * x" into "x * c".
      *
      * <pre>{@code
-     * if( !(t2->singleton() ||(in(2)->is_Load() && 
+     * if( !(t2->singleton() ||(in(2)->is_Load() &&
      *     !(t1->singleton() || in(1)->is_Load())) ) ) {
      *   if( t1->singleton() || (in(1)->_idx > in(2)->_idx) ) {
      *     swap_edges(1, 2);
@@ -179,7 +179,7 @@ public class MulNodeExample {
      *     if( t12->singleton() && t12 != Type::TOP ) { // Left input is an add of a constant?
      *       const Type *tcon01 = mul_ring(t2,t12); // Compute new constant (c1 * c2)
      *       if( tcon01->singleton() ) {            // Check for overflow
-     *       
+     *
      *         Node *mul = clone();                 // mul = () * c2
      *         mul->set_req(1,add1->in(1));         // mul = (x * c2)
      *         mul = phase->transform(mul);
@@ -503,6 +503,7 @@ public class MulNodeExample {
      */
     @Pattern
     @Origin("LLVM")
+    @PR(16333)
     public void pNewDeMorganLawAndToOr(int A, int B) {
         before((A ^ -1) & (B ^ -1));
         after((A | B) ^ (-1));

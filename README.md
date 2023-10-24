@@ -232,6 +232,12 @@ New optimizations:
 - [#7395](https://github.com/openjdk/jdk/pull/7395):
   8281518: New optimization: convert "(x|y)-(x^y)" into "x&y".
 
+- [#16333](https://github.com/openjdk/jdk/pull/16333):
+  Add Ideal transformation: (~a) & (~b) => ~(a | b)
+
+- [#16334](https://github.com/openjdk/jdk/pull/16334):
+  Add Ideal transformation: (~a) | (~b) => ~(a & b)
+
 New tests:
 
 - [#11049](https://github.com/openjdk/jdk/pull/11049):

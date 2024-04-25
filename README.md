@@ -252,7 +252,7 @@ Fix detected shadowed optimizations:
 ## Citation
 
 If you use JOG in your research, please cite our [ISSTA'23
-paper](https://cptgit.github.io/dl/papers/zang23jog.pdf).
+paper](https://cptgit.github.io/dl/papers/zang23jog.pdf) and [ICSE'24 Demo paper](https://zzqpro.net/dl/papers/zang24jogtool.pdf).
 
 ```bibtex
 @inproceedings{zang23jog,

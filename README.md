@@ -263,6 +263,14 @@ paper](https://cptgit.github.io/dl/papers/zang23jog.pdf).
   year= {2023},
   doi = {10.1145/3597926.3598038},
 }
+@inproceedings{zang24jogtool,
+  title = {{JOG}: Java {JIT} Peephole Optimizations and Tests from Patterns},
+  author = {Zang, Zhiqiang and Thimmaiah, Aditya and Gligoric, Milos},
+  booktitle = {International Conference on Software Engineering, Tool Demonstrations Track},
+  pages = {to apear},
+  year= {2024},
+  doi = {10.1145/3639478.3640040}
+}
 ```
 
 ## Contact
